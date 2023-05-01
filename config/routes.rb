@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  get("/users", { :controller => "users", :action => "index" })
 
+  #name the controller after the table and in plural
 
 end
