@@ -28,7 +28,7 @@ class PhotosController < ApplicationController
     # Parameters: {"query_image"=>"", "query_caption"=>"", "query_owner_id"=>""}
     input_image = params.fetch("query_image")
     input_caption = params.fetch("query_caption")
-    input_owner_id = params.fetch("input_owner_id")
+    input_owner_id = params.fetch("query_owner_id")
  
     a_new_photo = Photo.new
 
@@ -53,7 +53,7 @@ class PhotosController < ApplicationController
     input_caption = params.fetch("query_caption")
     
     the_photo.image = input_image
-    the_photo.image = input_caption
+    the_photo.caption = input_caption
 
     the_photo.save 
 
